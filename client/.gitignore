@@ -1,1 +1,9 @@
 .env
+
+/node_modules
+/dist
+/build
+.DS_Store
+npm-debug.log
+yarn-error.log
+.vscode
