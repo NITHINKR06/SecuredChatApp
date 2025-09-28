@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: passwordless-portal-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: packages/server
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        fromDatabase:
+          name: passwordless-portal-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
+      - key: RP_ID
+        value: your-domain.com
+      - key: RP_NAME
+        value: Passwordless Portal
+      - key: RP_ORIGIN
+        value: https://your-frontend-domain.vercel.app
+      - key: CORS_ORIGIN
+        value: https://your-frontend-domain.vercel.app
+
+databases:
+  - name: passwordless-portal-db
+    plan: free
