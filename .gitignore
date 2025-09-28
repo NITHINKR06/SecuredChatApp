@@ -1,33 +1,207 @@
+# Environment variables
 .env
-
-node_modules
-/client/node_modules
-/server/node_modules
-dist
-build
-
-.DS_Store
-npm-debug.log
-yarn-error.log
-.vscode
-.idea
-*.log
-coverage
-*.tsbuildinfo
 .env.local
 .env.*.local
+.env.development
+.env.test
+.env.production
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+/.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+client/dist/
+client/build/
+server/dist/
+server/build/
+*.tsbuildinfo
+.next/
+out/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+.grunt
+bower_components
+.lock-wscript
+
+# IDE and Editor files
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+.history/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+.cache/
+.parcel-cache/
+.temp/
+.tmp/
+
+# Package manager files
+.npm
+.eslintcache
+.stylelintcache
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Security and certificates
 *.pem
 *.key
 *.crt
 *.p12
 *.jks
-*.iml   
-*.swp
-*.swo
-*.bak
-*.orig
-*.rej
+*.pfx
+*.cer
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+data/
+
+# Uploads and media (keeping structure but ignoring files)
+server/uploads/**/*
+!server/uploads/.gitkeep
+uploads/
+media/
+public/uploads/
+
+# Documentation build
+docs/_build/
+docs/.vuepress/dist/
+site/
+
+# Miscellaneous
+*.iml
 *.class
 *.war
 *.jar
 *.exe
+*.dll
+*.so
+*.dylib
+.sass-cache/
+connect.lock
+libpeerconnection.log
+testem.log
+typings/
+
+# Python (if any scripts are used)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# AWS
+.aws/
+aws-exports.js
+
+# Firebase
+.firebase/
+.firebaserc
+
+# Serverless
+.serverless/
+
+# FuseBox
+.fusebox/
+
+# DynamoDB Local
+.dynamodb/
+
+# TernJS
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test/
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Turborepo
+.turbo/
+
+# Monorepo tools
+.nx/
+
+# Test files
+test-*.txt
+test-*.json
+*.test.js
+*.spec.js
+
+# Local environment notes
+TODO_LOCAL.md
+NOTES.md
+scratch/
